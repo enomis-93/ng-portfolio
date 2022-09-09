@@ -1,1 +1,11 @@
-<p>portfolio works!</p>
+<div class="d-flex container mt-2 wrapper">
+  <div class="card bg-dark m-1" *ngFor="let project of projects">
+    <img class="card-img-top" src="{{ project.image }}" alt="Card image cap" />
+    <div class="card-body">
+      <h5 class="card-title">{{ project.title }}</h5>
+      <p class="card-text">
+        {{ project.description }}
+      </p>
+    </div>
+  </div>
+</div>

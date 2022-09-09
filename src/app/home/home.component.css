@@ -1,0 +1,10 @@
+.bg-img {
+  background-image: url("/assets/images/dark-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#heading {
+  color: white;
+  margin: auto;
+}
