@@ -2,6 +2,15 @@
   width: 18rem;
 }
 
+.img {
+  object-fit: cover;
+}
+
 .card:hover {
-  width: 20rem;
+  border-color: #ffffff;
+  box-shadow: 0 0 10px #9ecaed;
+}
+
+a {
+  text-decoration: none;
 }

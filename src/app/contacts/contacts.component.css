@@ -1,0 +1,10 @@
+fa-icon {
+  color: white;
+  margin: 0 0.5em;
+  font-size: 1.7em;
+}
+
+fa-icon:hover {
+  font-size: 2em;
+  color: rgb(63, 152, 211);
+}

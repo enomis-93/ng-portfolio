@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-2">
+<!-- <nav class="navbar navbar-expand-lg px-2 navbar-dark">
   <a class="navbar-brand" routerLink="/home">Portfolio</a>
   <button
     class="navbar-toggler"
@@ -27,4 +27,39 @@
       </li>
     </ul>
   </div>
+</nav> -->
+
+<!-- ------- -->
+<nav class="navbar" ngxHideOnScroll [classNameWhenHidden]="'nav--hidden'">
+  <!-- LOGO -->
+  <div class="logo">LOGO</div>
+  <!-- NAVIGATION MENU -->
+  <ul class="nav-links">
+    <!-- USING CHECKBOX HACK -->
+    <input type="checkbox" id="checkbox_toggle" />
+    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+    <!-- NAVIGATION MENUS -->
+    <div class="menu">
+      <li *ngFor="let link of links">
+        <a
+          routerLink="{{ link.path }}"
+          routerLinkActive="active-route"
+          (click)="scrollToComponent(link.anchor)"
+          >{{ link.pageTitle }}</a
+        >
+      </li>
+      <!-- DROPDOWN MENU -->
+      <!-- <li class="services">
+        <a href="/">Services</a>
+        <ul class="dropdown">
+          <li><a href="/">Dropdown 1 </a></li>
+          <li><a href="/">Dropdown 2</a></li>
+          <li><a href="/">Dropdown 2</a></li>
+          <li><a href="/">Dropdown 3</a></li>
+          <li><a href="/">Dropdown 4</a></li>
+        </ul>
+      </li>
+    </li> -->
+    </div>
+  </ul>
 </nav>

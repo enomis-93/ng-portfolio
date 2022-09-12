@@ -1,10 +1,36 @@
 .bg-img {
-  background-image: url("/assets/images/dark-bg.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  background: linear-gradient(-45deg, #ee7652, #3c64e7, #34ceda, #3ada97);
+  background-size: 200% 200%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 #heading {
   color: white;
   margin: auto;
+}
+
+.cv-button {
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .cv-button {
+    padding: 1em 0em;
+    display: flex;
+    justify-content: left;
+  }
 }

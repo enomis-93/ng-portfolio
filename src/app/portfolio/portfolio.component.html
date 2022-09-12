@@ -1,11 +1,29 @@
-<div class="d-flex container mt-2 wrapper">
-  <div class="card bg-dark m-1" *ngFor="let project of projects">
+<div class="row d-flex mt-2 wrapper justify-content-center">
+  <div
+    class="col-12 col-sm-12 col-md-3 card bg-dark m-1"
+    *ngFor="let project of projects"
+  >
     <img class="card-img-top" src="{{ project.image }}" alt="Card image cap" />
     <div class="card-body">
-      <h5 class="card-title">{{ project.title }}</h5>
-      <p class="card-text">
+      <h5 class="card-title fw-bold">{{ project.title }}</h5>
+      <hr />
+      <!-- <p class="card-text">
         {{ project.description }}
-      </p>
+      </p> -->
+      <div class="d-flex justify-content-around">
+        <a
+          class="btn btn-outline-success"
+          href="{{ project.siteURL }}"
+          target="_blank"
+          >View Site</a
+        >
+        <a
+          class="btn btn-outline-secondary"
+          href="{{ project.gitHubURL }}"
+          target="_blank"
+          >View Code</a
+        >
+      </div>
     </div>
   </div>
 </div>
