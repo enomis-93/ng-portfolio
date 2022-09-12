@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { fromEvent, Observable, startWith } from 'rxjs';
 import { AppRoutingModule } from './app-routing.module';
@@ -15,6 +15,9 @@ export class AppComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
+    if (window.innerWidth <= 768) {
+      this.isOnMobileView = true;
+    }
     window.onresize = () => (this.isOnMobileView = window.innerWidth <= 768);
   }
 }
