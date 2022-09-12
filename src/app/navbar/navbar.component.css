@@ -33,6 +33,7 @@ li {
 } */
 /* LOGO */
 .logo {
+  cursor: pointer;
   font-size: 32px;
 }
 /* NAVBAR MENU */
@@ -135,7 +136,8 @@ input[type="checkbox"] {
   .menu li + li {
     margin-top: 12px;
   }
-  input[type="checkbox"]:checked ~ .menu {
+
+  .show-menu {
     display: block;
   }
 

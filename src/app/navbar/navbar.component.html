@@ -36,14 +36,16 @@
   <!-- NAVIGATION MENU -->
   <ul class="nav-links">
     <!-- USING CHECKBOX HACK -->
-    <input type="checkbox" id="checkbox_toggle" />
-    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+    <label for="checkbox_toggle" class="hamburger" (click)="toggleMenu()"
+      >&#9776;</label
+    >
     <!-- NAVIGATION MENUS -->
-    <div class="menu">
+    <div [ngClass]="isMenuOpen ? ['menu', 'show-menu'] : 'menu'">
       <li *ngFor="let link of links">
         <a
           routerLink="{{ link.path }}"
           routerLinkActive="active-route"
+          (click)="toggleMenu()"
           (click)="scrollToComponent(link.anchor)"
           >{{ link.pageTitle }}</a
         >

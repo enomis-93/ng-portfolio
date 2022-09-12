@@ -1,6 +1,5 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   @Input() isOnMobileView!: boolean;
+  isMenuOpen: boolean = false;
 
   links: any = [
     {
@@ -36,6 +36,10 @@ export class NavbarComponent implements OnInit {
   constructor(private scroller: ViewportScroller) {}
 
   ngOnInit(): void {}
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 
   scrollToComponent(anchor: string) {
     this.scroller.scrollToAnchor(anchor);
