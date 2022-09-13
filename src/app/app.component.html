@@ -1,12 +1,16 @@
-<app-navbar
-  [isOnMobileView]="isOnMobileView"
-  ngxHideOnScroll
-  [classNameWhenHidden]="'nav--hidden'"
-></app-navbar>
-<router-outlet *ngIf="!isOnMobileView"></router-outlet>
-<div *ngIf="isOnMobileView">
-  <app-home id="home"></app-home>
-  <app-about id="about"></app-about>
-  <app-portfolio id="portfolio"></app-portfolio>
-  <app-contacts id="contacts"></app-contacts>
+<div>
+  <app-navbar
+    [isOnMobileView]="isOnMobileView"
+    ngxHideOnScroll
+    [classNameWhenHidden]="'nav--hidden'"
+  ></app-navbar>
+  <div>
+    <router-outlet *ngIf="!isOnMobileView"></router-outlet>
+  </div>
+  <div *ngIf="isOnMobileView">
+    <app-home id="home"></app-home>
+    <app-about id="about"></app-about>
+    <app-portfolio id="portfolio"></app-portfolio>
+    <app-contacts id="contacts"></app-contacts>
+  </div>
 </div>

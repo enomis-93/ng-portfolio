@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
@@ -11,7 +11,7 @@ import {
   faWhatsapp,
 } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { ContactService } from '../services/contact.service';
+import { ThemeService } from '../services/theme.service';
 
 @Component({
   selector: 'app-contacts',
@@ -31,7 +31,18 @@ export class ContactsComponent implements OnInit {
   faLinkedin = faLinkedin;
   faGithub = faGithub;
   faMail = faEnvelope;
-  constructor(private builder: FormBuilder, private contact: ContactService) {}
+
+  // isThemeDark: boolean = true;
+
+  constructor(
+    private builder: FormBuilder,
+    private themeService: ThemeService
+  ) {
+    // Subscribe to Theme Variable to catch theme changed
+    // this.themeService.themeChanged.subscribe((value) => {
+    //   this.isThemeDark = value;
+    // });
+  }
 
   ngOnInit(): void {
     this.FormData = this.builder.group({
@@ -40,6 +51,11 @@ export class ContactsComponent implements OnInit {
       message: new FormControl('', [Validators.required]),
     });
   }
+
+  // Obtain theme variable from service
+  // get isDarkTheme(): boolean {
+  //   return this.themeService.isDarkModeActive;
+  // }
 
   onSubmit(FormData: FormData) {
     console.log(FormData);

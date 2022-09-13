@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  --text-color: #eee;
+  --bkg-color: #252222;
+  --btn-txt-color: rgb(46, 43, 43);
+  --btn-bg-color: rgb(20, 211, 195);
+  --icon-color: rgb(139, 139, 139);
+}
+body.light-theme {
+  --text-color: rgb(34, 34, 34);
+  --bkg-color: rgb(113, 175, 255);
+  --btn-txt-color: rgb(226, 226, 226)
+  --btn-bg-color: rgb(11, 88, 160);
+  --icon-color: rgb(122, 122, 122);
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--bkg-color);
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+
+.wrapper {
+  padding: 2em 0em;
+}
+
+a.link {
+  color: var(--text-color);
+}
+
+.card {
+  width: 18rem;
+  background-color: var(--bkg-color);
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    width: 100vw;
+    height: 100vh;
+    padding: 5em 0em;
+  }
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
