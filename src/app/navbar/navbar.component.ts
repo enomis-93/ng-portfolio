@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit, OnChanges {
   @Input() isOnMobileView!: boolean;
   isMenuOpen: boolean = false;
   userHasScrolled: boolean = false;
-  isDarkThemeActive: boolean = this.themeService.storedTheme == 'dark-theme';
+  isDarkThemeActive: boolean = this.themeService.isDarkModeActive;
 
   faAnglesDown = faAnglesDown;
   faAnglesUp = faAnglesUp;
