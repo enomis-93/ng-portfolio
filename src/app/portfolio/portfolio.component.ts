@@ -14,6 +14,14 @@ export class PortfolioComponent implements OnInit {
   ngOnInit(): void {
     this.projects = [
       {
+        title: 'Responsive Angular Weather App',
+        description:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptas dolores sequi, quam ab suscipit error veniam, fuga aperiam officiis cum adipisci necessitatibus autem, ad quo accusantium sapiente minus! Asperiores.',
+        image: 'assets/images/project-pics/Weather-app.jpg',
+        siteURL: 'https://ng-weather-app.netlify.app/',
+        gitHubURL: 'https://github.com/enomis-93/angular-weather-app',
+      },
+      {
         title: 'Bootstrap Responsive Page',
         description:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptas dolores sequi, quam ab suscipit error veniam, fuga aperiam officiis cum adipisci necessitatibus autem, ad quo accusantium sapiente minus! Asperiores.',
