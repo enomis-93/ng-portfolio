@@ -1,5 +1,13 @@
 .bg-img {
-  background: linear-gradient(-45deg, #ee7652, #3c64e7, #34ceda, #3ada97);
+  width: 100vw;
+  background: linear-gradient(
+    45deg,
+    rgba(0, 220, 255, 1) 0%,
+    rgba(11, 3, 150, 1) 22%,
+    rgba(9, 9, 121, 1) 38%,
+    rgba(4, 190, 197, 1) 72%,
+    rgba(0, 255, 174, 1) 100%
+  );
   background-size: 200% 200%;
   animation: gradient 15s ease infinite;
 }

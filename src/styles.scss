@@ -1,17 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   --text-color: #eee;
   --bkg-color: #252222;
   --btn-txt-color: rgb(46, 43, 43);
   --btn-bg-color: rgb(20, 211, 195);
-  --icon-color: rgb(139, 139, 139);
+  --icon-color: rgb(255, 255, 255);
+  --icon-color-hover: rgb(122, 122, 122);
+  --input-bg: rgb(33,37,41);
+  // Navbar link
+  --link-color: white;
 }
 body.light-theme {
-  --text-color: rgb(34, 34, 34);
-  --bkg-color: rgb(113, 175, 255);
+  --text-color: rgb(71, 71, 71);
+  --bkg-color: rgb(184, 185, 185);
   --btn-txt-color: rgb(226, 226, 226)
   --btn-bg-color: rgb(11, 88, 160);
-  --icon-color: rgb(122, 122, 122);
+  --icon-color: white;
+  --icon-color-hover:rgb(122, 122, 122);
+  --input-bg: transparent;
+  // Navbar link
+  --link-color: white;
 }
 
 body {
@@ -20,15 +34,14 @@ body {
   background-color: var(--bkg-color);
   color: var(--text-color);
   font-size: 1.2rem;
+  width: 100vw;
 }
 
 .wrapper {
   padding: 2em 0em;
+  width: 100vw;
 }
 
-a.link {
-  color: var(--text-color);
-}
 
 .card {
   width: 18rem;

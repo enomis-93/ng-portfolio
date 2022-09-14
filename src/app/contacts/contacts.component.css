@@ -6,5 +6,15 @@ fa-icon {
 }
 
 fa-icon:hover {
+  color: var(--icon-color-hover);
   font-size: 2em;
+}
+
+input,
+textarea {
+  background-color: var(--input-bg);
+}
+
+::placeholder {
+  color: var(--text-color);
 }

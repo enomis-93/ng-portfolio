@@ -31,7 +31,7 @@ export class ThemeService {
 
     this.storedTheme = theme;
     this.setTheme();
-    console.log('Stored theme:' + this.storedTheme);
+    // console.log('Stored theme:' + this.storedTheme);
   }
 
   toggleTheme() {
@@ -54,6 +54,6 @@ export class ThemeService {
       'active-theme',
       this.storedTheme === 'light-theme' ? 'light-theme' : 'dark-theme'
     );
-    console.log('DarkTheme:' + this.isDarkModeActive + ' ' + this.storedTheme);
+    // console.log('DarkTheme:' + this.isDarkModeActive + ' ' + this.storedTheme);
   }
 }
