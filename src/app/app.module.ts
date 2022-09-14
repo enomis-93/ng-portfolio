@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactService } from './services/contact.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgxHideOnScrollModule } from 'ngx-hide-on-scroll';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { NgxHideOnScrollModule } from 'ngx-hide-on-scroll';
     HttpClientModule,
     FontAwesomeModule,
     NgxHideOnScrollModule,
+    BrowserAnimationsModule,
   ],
   providers: [ContactService],
   bootstrap: [AppComponent],
