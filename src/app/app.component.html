@@ -10,7 +10,7 @@
   <router-outlet #o="outlet"></router-outlet>
 </div>
 <div *ngIf="isOnMobileView">
-  <app-home id="home"></app-home>
+  <app-home [isOnMobileView]="isOnMobileView" id="home"></app-home>
   <app-about id="about"></app-about>
   <app-portfolio id="portfolio"></app-portfolio>
   <app-contacts id="contacts"></app-contacts>
