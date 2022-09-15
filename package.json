@@ -25,9 +25,12 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "bootstrap": "^5.2.0",
     "bootstrap-icons": "^1.9.1",
+    "ng-particles": "^3.3.1",
     "ngx-hide-on-scroll": "^0.2.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
+    "tsparticles": "^2.3.1",
+    "tsparticles-engine": "^2.3.1",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {

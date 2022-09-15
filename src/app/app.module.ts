@@ -14,6 +14,7 @@ import { ContactService } from './services/contact.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgxHideOnScrollModule } from 'ngx-hide-on-scroll';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgParticlesModule } from 'ng-particles';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FontAwesomeModule,
     NgxHideOnScrollModule,
     BrowserAnimationsModule,
+    NgParticlesModule,
   ],
   providers: [ContactService],
   bootstrap: [AppComponent],
