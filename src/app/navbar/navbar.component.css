@@ -197,12 +197,23 @@ input:checked + .slider > .theme-icon {
     top: 0;
     width: 100%;
     background-color: transparent;
-    backdrop-filter: blur(5px);
-    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-blur {
+    backdrop-filter: blur(10px);
   }
 
   nav.nav--hidden {
     transform: translateY(-100%);
+  }
+
+  .bg-blur {
+    backdrop-filter: blur(10px);
+    background-color: #2e2e2e8e;
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
   }
 
   .menu {
@@ -215,8 +226,7 @@ input:checked + .slider > .theme-icon {
     text-align: center;
     padding: 5em 0;
     height: 100vh;
-    backdrop-filter: blur(8px);
-    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.5s ease-in-out;
   }
 
   .menu li:hover {

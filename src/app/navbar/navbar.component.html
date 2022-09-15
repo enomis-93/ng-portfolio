@@ -1,4 +1,10 @@
-<nav class="navbar" ngxHideOnScroll [classNameWhenHidden]="'nav--hidden'">
+<div [ngClass]="isMenuOpen ? ['bg-blur'] : ''"></div>
+
+<nav
+  [ngClass]="isMenuOpen ? ['navbar'] : ['navbar', 'nav-blur']"
+  ngxHideOnScroll
+  [classNameWhenHidden]="'nav--hidden'"
+>
   <!-- LOGO -->
   <img
     class="logo"
@@ -26,16 +32,16 @@
         </li>
         <!-- DROPDOWN MENU -->
         <!-- <li class="services">
-            <a href="/">Services</a>
-            <ul class="dropdown">
-              <li><a href="/">Dropdown 1 </a></li>
-              <li><a href="/">Dropdown 2</a></li>
-              <li><a href="/">Dropdown 2</a></li>
-              <li><a href="/">Dropdown 3</a></li>
-              <li><a href="/">Dropdown 4</a></li>
-            </ul>
-          </li>
-        </li> -->
+              <a href="/">Services</a>
+              <ul class="dropdown">
+                <li><a href="/">Dropdown 1 </a></li>
+                <li><a href="/">Dropdown 2</a></li>
+                <li><a href="/">Dropdown 2</a></li>
+                <li><a href="/">Dropdown 3</a></li>
+                <li><a href="/">Dropdown 4</a></li>
+              </ul>
+            </li>
+          </li> -->
       </div>
     </ul>
   </div>
