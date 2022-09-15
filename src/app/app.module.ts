@@ -15,6 +15,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgxHideOnScrollModule } from 'ngx-hide-on-scroll';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgParticlesModule } from 'ng-particles';
+import { ParticlesBgComponent } from './particles-bg/particles-bg.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { NgParticlesModule } from 'ng-particles';
     PortfolioComponent,
     ContactsComponent,
     HomeComponent,
+    ParticlesBgComponent,
   ],
   imports: [
     BrowserModule,
