@@ -131,11 +131,11 @@ a.link {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-.slider:before {
+/* .slider:before {
   position: absolute;
   content: "";
   height: 16px;
@@ -145,10 +145,22 @@ a.link {
   background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+} */
+
+.slider > .theme-icon {
+  color: yellow;
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color: #2e2e2e;
 }
 
 input:focus + .slider {
@@ -156,6 +168,14 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+input:checked + .slider > .theme-icon {
+  color: white;
+  display: block;
   -webkit-transform: translateX(16px);
   -ms-transform: translateX(16px);
   transform: translateX(16px);
@@ -189,14 +209,16 @@ input:checked + .slider:before {
     font-size: 1.5em;
     display: none;
     position: absolute;
+    top: 60px;
     right: 0;
     left: 0;
     text-align: center;
     padding: 5em 0;
-    background-color: rgba(0, 0, 0, 0.377);
-    backdrop-filter: blur(5px);
     height: 100vh;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.5);
   }
+
   .menu li:hover {
     display: inline-block;
     background-color: #ffffff6c;

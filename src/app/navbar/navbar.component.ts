@@ -1,6 +1,12 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
-import { faAnglesDown, faAnglesUp } from '@fortawesome/free-solid-svg-icons';
+import {
+  faAnglesDown,
+  faAnglesUp,
+  faCircle,
+  faMoon,
+  faSun,
+} from '@fortawesome/free-solid-svg-icons';
 import { ThemeService } from '../services/theme.service';
 
 @Component({
@@ -16,6 +22,8 @@ export class NavbarComponent implements OnInit, OnChanges {
 
   faAnglesDown = faAnglesDown;
   faAnglesUp = faAnglesUp;
+  faMoon = faMoon;
+  faSun = faCircle;
 
   links: any = [
     {

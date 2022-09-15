@@ -42,10 +42,16 @@
   <!-- THEME TOGGLE -->
   <label class="switch">
     <input
+      #checkbox
       type="checkbox"
       [checked]="isDarkThemeActive"
       (change)="toggleTheme($event)"
     />
-    <span class="slider round"></span>
+    <span class="slider round">
+      <fa-icon
+        class="theme-icon"
+        [icon]="checkbox.checked ? faMoon : faSun"
+      ></fa-icon>
+    </span>
   </label>
 </nav>
