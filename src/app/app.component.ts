@@ -47,15 +47,19 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // Check if user is connected from mobile device or not
+    this.isOnMobile();
+    this.setTheme();
+  }
+
+  // Check if user is connected from mobile device or not
+  isOnMobile() {
     if (window.innerWidth <= 768) {
       this.isOnMobileView = true;
     }
     window.onresize = () => (this.isOnMobileView = window.innerWidth <= 768);
-
-    this.setTheme();
   }
 
+  // Set Theme from the storage
   setTheme() {
     localStorage.setItem('active-theme', 'dark-theme');
   }
