@@ -16,6 +16,7 @@ import { NgxHideOnScrollModule } from 'ngx-hide-on-scroll';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgParticlesModule } from 'ng-particles';
 import { ParticlesBgComponent } from './particles-bg/particles-bg.component';
+import { NgxTranslateModule } from './translate/translate.module';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { ParticlesBgComponent } from './particles-bg/particles-bg.component';
     NgxHideOnScrollModule,
     BrowserAnimationsModule,
     NgParticlesModule,
+    NgxTranslateModule,
   ],
   providers: [ContactService],
   bootstrap: [AppComponent],

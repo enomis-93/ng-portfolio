@@ -8,6 +8,7 @@ import {
   faSun,
 } from '@fortawesome/free-solid-svg-icons';
 import { ThemeService } from '../services/theme.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
@@ -24,6 +25,8 @@ export class NavbarComponent implements OnInit, OnChanges {
   faAnglesUp = faAnglesUp;
   faMoon = faMoon;
   faSun = faCircle;
+
+  settedLang!: string | null;
 
   links: any = [
     {
@@ -50,8 +53,13 @@ export class NavbarComponent implements OnInit, OnChanges {
 
   constructor(
     private scroller: ViewportScroller,
-    private themeService: ThemeService
-  ) {}
+    private themeService: ThemeService,
+    private translate: TranslateService
+  ) {
+    // Transalte config
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+  }
 
   ngOnInit(): void {}
 
@@ -84,5 +92,15 @@ export class NavbarComponent implements OnInit, OnChanges {
 
   scrollToComponent(anchor: string) {
     this.scroller.scrollToAnchor(anchor);
+  }
+
+  changeLanguage(language: string, event: any): void {
+    localStorage.setItem('lang', language);
+    this.settedLang = localStorage.getItem('lang');
+    this.translate.use(this.settedLang || 'en');
+    // Close option container
+    event.target.parentElement.parentElement.parentElement.removeAttribute(
+      'open'
+    );
   }
 }

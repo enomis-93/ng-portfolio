@@ -27,7 +27,7 @@
             class="link"
             (click)="toggleMenu()"
             (click)="scrollToComponent(link.anchor)"
-            >{{ link.pageTitle }}</a
+            >{{ link.pageTitle | translate }}</a
           >
         </li>
         <!-- DROPDOWN MENU -->
@@ -45,19 +45,52 @@
       </div>
     </ul>
   </div>
-  <!-- THEME TOGGLE -->
-  <label class="switch">
-    <input
-      #checkbox
-      type="checkbox"
-      [checked]="isDarkThemeActive"
-      (change)="toggleTheme($event)"
-    />
-    <span class="slider round">
-      <fa-icon
-        class="theme-icon"
-        [icon]="checkbox.checked ? faMoon : faSun"
-      ></fa-icon>
-    </span>
-  </label>
+
+  <!-- LANG SWITCHER -->
+  <!-- <div class="center">
+    <select
+      name="sources"
+      id="sources"
+      class="custom-select sources"
+      placeholder="Source Type"
+      (change)="changeLanguage($event)"
+    >
+      <option value="en">en</option>
+      <option value="it">it</option>
+    </select>
+  </div> -->
+
+  <div class="d-flex">
+    <details class="custom-select">
+      <summary class="radios">
+        <input type="radio" name="lang" id="default" title="EN" checked />
+        <input type="radio" name="lang" id="en" title="EN" />
+        <input type="radio" name="lang" id="it" title="IT" />
+      </summary>
+      <ul class="list">
+        <li (click)="changeLanguage('en', $event)">
+          <label for="en"> EN </label>
+        </li>
+        <li (click)="changeLanguage('it', $event)">
+          <label for="it">IT</label>
+        </li>
+      </ul>
+    </details>
+
+    <!-- THEME TOGGLE -->
+    <label class="switch">
+      <input
+        #checkbox
+        type="checkbox"
+        [checked]="isDarkThemeActive"
+        (change)="toggleTheme($event)"
+      />
+      <span class="slider round">
+        <fa-icon
+          class="theme-icon"
+          [icon]="checkbox.checked ? faMoon : faSun"
+        ></fa-icon>
+      </span>
+    </label>
+  </div>
 </nav>

@@ -2,6 +2,7 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { fromEvent, Observable, startWith } from 'rxjs';
 import { ThemeService } from './services/theme.service';
+import { TranslateService } from '@ngx-translate/core';
 import {
   transition,
   trigger,

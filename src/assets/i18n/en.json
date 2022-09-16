@@ -1,0 +1,35 @@
+{
+  "Home": "Home",
+  "About": "About",
+  "Portfolio": "Portfolio",
+  "Contacts": "Contacts",
+
+  "home": {
+    "heading": " Hello,<br/>I'm Simone Manenti<br/>Jr. Web Developer",
+    "download": "Download CV"
+  },
+
+  "about": {
+    "title": "ABOUT",
+    "description": "Intraprendente, motivato, curioso. La passione per il mondo tech mi ha condotto a dare una svolta alla mia vita attraverso un percorso intensivo da Fullstack Web Developer e trasformare così un sogno nel mio lavoro."
+  },
+
+  "portfolio": {
+    "btn-site-text": "View Site",
+    "btn-code-text": "View Code"
+  },
+
+  "contacts": {
+    "form": {
+      "email": "Email",
+      "name": "Full Name",
+      "message": "Message",
+      "submit-btn": "Send"
+    },
+    "form-placeholder": {
+      "email": "Enter Email",
+      "name": "Enter Full Name/Company Name",
+      "message": "Enter Message"
+    }
+  }
+}
