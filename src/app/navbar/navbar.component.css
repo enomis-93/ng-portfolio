@@ -15,7 +15,6 @@ li {
 }
 
 /* NAVBAR STYLING STARTS */
-
 .navbar {
   display: flex;
   padding: 10px;
@@ -201,36 +200,6 @@ ul.list label {
   justify-content: space-around;
 }
 
-/* .center {
-  position: absolute;
-  display: inline-block;
-  top: 50%;
-  right: 8%;
-  transform: translate(-50%, -50%);
-  overflow: hidden;
-} */
-
-/** Custom Select **/
-/* 
-select {
-  position: relative;
-  display: inline-block;
-  border: 1px solid var(--text-color);
-  border-radius: 50px;
-  background-color: transparent;
-  color: var(--text-color);
-  width: 50px;
-  height: 24px;
-  font-size: 15px;
-  text-transform: uppercase;
-  text-align: center;
-  text-align-last: center;
-}
-
-select:focus {
-  border-radius: 3px;
-} */
-
 /* --------------------------- DROPDOWN MENU -------------------------- */
 
 .services {
@@ -296,18 +265,6 @@ select:focus {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-
-/* .slider:before {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-} */
 
 .slider > .theme-icon {
   color: yellow;
