@@ -1,6 +1,61 @@
-a {
+.contacts-section-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.contacts-icons-container {
+  padding: 2em 0em;
+}
+
+.contacts-icons {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+/* ---- Icon Text on icon hover  */
+.contacts-icons > a {
   position: relative;
 }
+.side-text {
+  position: absolute;
+  color: white;
+  font-size: 1;
+  display: none;
+  left: 0%;
+  top: 85%;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+fa-icon:hover ~ .side-text {
+  display: block;
+}
+
+.side-text.whatsapp {
+  left: -21.5%;
+}
+.side-text.github {
+  left: 0%;
+}
+.side-text.linkedin {
+  left: -8.5%;
+}
+.side-text.email {
+  left: 15%;
+}
+/*  -------- */
 
 fa-icon {
   cursor: pointer;
@@ -10,21 +65,20 @@ fa-icon {
 }
 
 fa-icon:hover {
+  animation: bounce infinite 0.5s;
   color: var(--icon-color-hover);
-  font-size: 2em;
 }
 
-.side-text {
-  position: absolute;
-  color: white;
-  font-size: 1;
-  /* display: none; */
-  left: 0%;
-  top: 100%;
-}
-
-fa-icon:hover ~ .side-text {
-  display: block;
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 input,

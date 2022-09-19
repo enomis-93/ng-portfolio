@@ -1,27 +1,30 @@
 <div class="bg-img">
   <div class="container-fluid">
     <div class="row justify-content-center wrapper">
-      <section class="contact-section col-sm-12 col-md-6 box">
+      <section
+        class="contact-section col-sm-12 col-md-6 contacts-section-container"
+      >
         <!-- Contacts Icons -->
-        <div>
-          <a href="{{ whatsappLink }}" target="_blank"
-            ><fa-icon class="contact-icon" [icon]="faWhatsapp"></fa-icon>
-          </a>
-          <a href="{{ gitHubLink }}" target="_blank"
-            ><fa-icon class="contact-icon" [icon]="faGithub"> </fa-icon>
-          </a>
-          <a href="{{ linkedinLink }}" target="_blank"
-            ><fa-icon class="contact-icon" [icon]="faLinkedin"></fa-icon>
-          </a>
-          <a href="{{ emailString }}" target="_blank"
-            ><fa-icon class="contact-icon" [icon]="faMail"> ></fa-icon>
-          </a>
-        </div>
-        <div>
-          <div class="side-text">Whatsapp</div>
-          <div class="side-text">GitHub</div>
-          <div class="side-text">Linkedin</div>
-          <div class="side-text">Email</div>
+        <div class="contacts-icons-container">
+          <div class="contacts-icons">
+            <a href="{{ whatsappLink }}" target="_blank"
+              ><fa-icon class="contact-icon" [icon]="faWhatsapp"></fa-icon>
+              <span class="side-text whatsapp">Whatsapp</span>
+            </a>
+            <a href="{{ gitHubLink }}" target="_blank"
+              ><fa-icon class="contact-icon" [icon]="faGithub"> </fa-icon>
+              <span class="side-text github">GitHub</span>
+            </a>
+            <a href="{{ linkedinLink }}" target="_blank"
+              ><fa-icon class="contact-icon" [icon]="faLinkedin"></fa-icon>
+              <span class="side-text linkedin">Linkedin</span>
+            </a>
+            <a href="{{ emailString }}" target="_blank"
+              ><fa-icon class="contact-icon" [icon]="faMail"> ></fa-icon>
+              <span class="side-text email">Email</span>
+            </a>
+          </div>
+          <div class="contacts-icons-label"></div>
         </div>
       </section>
 

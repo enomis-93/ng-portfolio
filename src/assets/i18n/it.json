@@ -28,7 +28,7 @@
     },
     "form-placeholder": {
       "email": "Inserisci la tua Email",
-      "name": "Inserisci 'Nome e Cognome/Nome Azienda'",
+      "name": "Inserisci Nome e Cognome/Nome Azienda'",
       "message": "Inserisci il messaggio"
     }
   }
