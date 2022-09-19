@@ -172,6 +172,10 @@ input[type="radio"] {
   display: none;
   color: white;
   margin-right: 0.5em;
+  position: absolute;
+  z-index: -1;
+  top: 1px;
+  right: 12px;
 }
 
 input[type="radio"]:checked {

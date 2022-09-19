@@ -1,3 +1,7 @@
+a {
+  position: relative;
+}
+
 fa-icon {
   cursor: pointer;
   margin: 0 0.5em;
@@ -8,6 +12,19 @@ fa-icon {
 fa-icon:hover {
   color: var(--icon-color-hover);
   font-size: 2em;
+}
+
+.side-text {
+  position: absolute;
+  color: white;
+  font-size: 1;
+  /* display: none; */
+  left: 0%;
+  top: 100%;
+}
+
+fa-icon:hover ~ .side-text {
+  display: block;
 }
 
 input,
@@ -24,6 +41,13 @@ textarea {
   align-self: center;
   justify-self: center;
   justify-content: center;
+}
+
+input[placeholder],
+textarea[placeholder] {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 form {
