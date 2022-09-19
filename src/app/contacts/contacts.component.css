@@ -18,3 +18,14 @@ textarea {
 ::placeholder {
   color: var(--text-color);
 }
+
+.form-container {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  justify-content: center;
+}
+
+form {
+  width: 80%;
+}
