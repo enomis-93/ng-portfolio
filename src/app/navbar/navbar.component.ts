@@ -13,7 +13,7 @@ import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css'],
+  styleUrls: ['./navbar.component.css', './navbar.mobile.component.css'],
 })
 export class NavbarComponent implements OnInit, OnChanges {
   @Input() isOnMobileView!: boolean;
