@@ -83,6 +83,7 @@ fa-icon:hover {
 
 input,
 textarea {
+  color: var(--text-color);
   background-color: var(--input-bg);
 }
 

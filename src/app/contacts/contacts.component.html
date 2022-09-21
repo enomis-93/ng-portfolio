@@ -29,12 +29,29 @@
       </section>
 
       <section class="col-sm-12 col-md-6 form-container">
+        <!-- Alert Form submission valid/invalid -->
         <!-- Form -->
         <form
-          [formGroup]="FormData"
-          action="https://formspree.io/f/xlevgoqz"
+          [formGroup]="formGroup"
+          (submit)="onSubmit(formGroup)"
           method="POST"
         >
+          <div
+            class="alert text-center"
+            [ngClass]="{
+              'alert-success': !hasFormError,
+              'alert-danger': hasFormError
+            }"
+            *ngIf="submitted && !hasFormError"
+          >
+            {{
+              (!hasFormError
+                ? "contacts.form-messages.submit-form-success"
+                : "contacts.form-messages.submit-form-error"
+              ) | translate
+            }}
+          </div>
+          <!------------------- Email Input ------------------->
           <div class="form-group">
             <label for="Email">{{ "contacts.form.email" | translate }}</label>
             <input
@@ -44,8 +61,40 @@
               aria-describedby="emailHelp"
               placeholder="{{ 'contacts.form-placeholder.email' | translate }}"
               formControlName="email"
+              [ngClass]="{
+                'is-invalid':
+                  formGroup.get('email')?.invalid &&
+                  (formGroup.get('email')?.dirty ||
+                    formGroup.get('email')?.touched) &&
+                  formGroup.get('email')?.errors,
+                'is-valid':
+                  formGroup.get('email')?.valid &&
+                  (formGroup.get('email')?.dirty ||
+                    formGroup.get('email')?.touched) &&
+                  !formGroup.get('email')?.errors
+              }"
             />
+            <div
+              *ngIf="
+                formGroup.get('email')?.invalid &&
+                (formGroup.get('email')?.dirty ||
+                  formGroup.get('email')?.touched)
+              "
+            >
+              <small class="text-danger" *ngIf="email?.errors?.['required']">
+                {{ "contacts.form-messages.email.required" | translate }}
+              </small>
+              <small
+                class="text-danger"
+                *ngIf="formGroup.get('email')?.hasError('pattern')"
+              >
+                {{ "contacts.form-messages.email.invalid" | translate }}
+              </small>
+            </div>
           </div>
+
+          <!-- ------------------------------------------ -->
+          <!------------------------- Name ------------------------->
           <div class="form-group">
             <label for="fullname">{{ "contacts.form.name" | translate }}</label>
             <input
@@ -54,22 +103,125 @@
               name="name"
               placeholder="{{ 'contacts.form-placeholder.name' | translate }}"
               formControlName="name"
+              [ngClass]="{
+                'is-invalid':
+                  formGroup.get('name')?.invalid &&
+                  (formGroup.get('name')?.dirty ||
+                    formGroup.get('name')?.touched) &&
+                  formGroup.get('name')?.errors,
+                'is-valid':
+                  formGroup.get('name')?.valid &&
+                  (formGroup.get('name')?.dirty ||
+                    formGroup.get('name')?.touched) &&
+                  !formGroup.get('name')?.errors
+              }"
             />
+            <div
+              *ngIf="
+                formGroup.get('name')?.invalid &&
+                (formGroup.get('name')?.dirty || formGroup.get('name')?.touched)
+              "
+            >
+              <small
+                class="text-danger"
+                *ngIf="formGroup.get('name')?.hasError('required')"
+              >
+                {{ "contacts.form-messages.name.required" | translate }}
+              </small>
+              <small
+                class="text-danger"
+                *ngIf="formGroup.get('name')?.hasError('minlength')"
+              >
+                {{ "contacts.form-messages.name.minlength" | translate }}
+              </small>
+            </div>
           </div>
+          <!-------------------------------------------------->
+          <!------------------------- Message ------------------------->
+
           <div class="form-group">
             <label for="message">{{
               "contacts.form.message" | translate
             }}</label>
             <textarea
               class="form-control my-1"
-              formControlName="message"
-              name="message"
               placeholder="{{
                 'contacts.form-placeholder.message' | translate
               }}"
+              formControlName="message"
+              [ngClass]="{
+                'is-invalid':
+                  formGroup.get('message')?.invalid &&
+                  (formGroup.get('message')?.dirty ||
+                    formGroup.get('message')?.touched) &&
+                  formGroup.get('message')?.errors,
+                'is-valid':
+                  formGroup.get('message')?.valid &&
+                  (formGroup.get('message')?.dirty ||
+                    formGroup.get('message')?.touched) &&
+                  !formGroup.get('message')?.errors
+              }"
+              name="message"
             ></textarea>
+
+            <div
+              *ngIf="
+                formGroup.get('message')?.invalid &&
+                (formGroup.get('message')?.dirty ||
+                  formGroup.get('message')?.touched)
+              "
+            >
+              <small class="text-danger" *ngIf="message?.errors?.['required']">
+                {{ "contacts.form-messages.message.required" | translate }}
+              </small>
+              <small
+                class="text-danger"
+                *ngIf="formGroup.get('message')?.hasError('minlength')"
+              >
+                {{ "contacts.form-messages.message.minlength" | translate }}
+              </small>
+            </div>
           </div>
-          <button type="submit" class="btn btn-primary my-1">
+          <!-------------------------------------------------->
+          <!-- I Agree Checkbox by https://www.TermsFeed.com -->
+          <div class="form-group form-check">
+            <input
+              type="checkbox"
+              formControlName="acceptTerms"
+              id="acceptTerms"
+              class="form-check-input"
+              [ngClass]="{
+                'is-invalid': submitted && formGroup.get('acceptTerms')?.errors
+              }"
+            />
+            <label for="acceptTerms" class="form-check-label">
+              {{
+                "contacts.form-messages.accept-terms.checkbox-text" | translate
+              }}
+              <span
+                ><a
+                  href="https://www.termsfeed.com/live/1ac4c831-0050-4234-b4e1-e47b92190b67"
+                  target="_blank"
+                  >{{
+                    "contacts.form-messages.accept-terms.privacy-policy"
+                      | translate
+                  }}</a
+                ></span
+              ></label
+            >
+            <div
+              *ngIf="submitted && formGroup.get('acceptTerms')?.errors"
+              class="invalid-feedback"
+            >
+              {{ "contacts.form-messages.accept-terms.required" | translate }}
+            </div>
+          </div>
+          <!-- End I Agree Checkbox -->
+          <button
+            type="submit"
+            class="btn btn-primary my-1"
+            [disabled]="!formGroup.valid"
+          >
             {{ "contacts.form.submit-btn" | translate }}
           </button>
         </form>

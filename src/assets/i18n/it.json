@@ -30,6 +30,27 @@
       "email": "Inserisci la tua Email",
       "name": "Inserisci Nome e Cognome/Nome Azienda'",
       "message": "Inserisci il messaggio"
+    },
+    "form-messages": {
+      "submit-form-success": "Grazie, il tuo messaggio è stato inviato con successo !",
+      "submit-form-error": "Assicurati di aver compilato tutti i campi !",
+      "email": {
+        "required": "email richiesta",
+        "invalid": "email non valida"
+      },
+      "name": {
+        "required": "nome richiesto",
+        "minlength": "il nome deve essere lungo almeno 3 caratteri"
+      },
+      "message": {
+        "required": "messaggio richiesto",
+        "minlength": "il messaggio deve essere lungo almeno 10 caratteri"
+      },
+      "accept-terms": {
+        "checkbox-text": "Spunta il campo per indicare di aver letto e accettato i termini della nostra",
+        "privacy-policy": "Politica sulla Privacy",
+        "required": " E' richiesta l'accettazione della Politica sulla Privacy"
+      }
     }
   }
 }

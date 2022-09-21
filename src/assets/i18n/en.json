@@ -11,7 +11,7 @@
 
   "about": {
     "title": "ABOUT",
-    "description": "Intraprendente, motivato, curioso. La passione per il mondo tech mi ha condotto a dare una svolta alla mia vita attraverso un percorso intensivo da Fullstack Web Developer e trasformare così un sogno nel mio lavoro."
+    "description": "Enterprising, motivated, curious. The passion for the tech world led me to make a change in my life through an intensive path as a Fullstack Web Developer, to transform my dream into my job."
   },
 
   "portfolio": {
@@ -30,6 +30,27 @@
       "email": "Enter Email",
       "name": "Enter Full Name/Company Name",
       "message": "Enter Message"
+    },
+    "form-messages": {
+      "submit-form-success": "Thanks, your message has been sent successfully",
+      "submit-form-error": "Make sure you have entered the required fields !",
+      "email": {
+        "required": "email required",
+        "invalid": "email is not valid"
+      },
+      "name": {
+        "required": "name required",
+        "minlength": "message must be at least 3 characters long."
+      },
+      "message": {
+        "required": "message required",
+        "minlength": "message must be at least 10 characters long."
+      },
+      "accept-terms": {
+        "checkbox-text": "Check here to indicate that you have read and agree to the terms of our",
+        "privacy-policy": "Privacy Policy",
+        "required": " Accept Privay Policy is required"
+      }
     }
   }
 }
